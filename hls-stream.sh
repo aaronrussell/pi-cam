@@ -18,7 +18,7 @@ ln -s "$PWD/$session" www/live
 mkfifo $fifo
 raspivid \
   -w 1024 -h 576 -fps 25 -b 900000 \
-  -t 86400000 -o - | psips > $fifo &
+  -t 86400000 -hf -vf -o - | psips > $fifo &
 
 
 # Crank up ffmpeg
