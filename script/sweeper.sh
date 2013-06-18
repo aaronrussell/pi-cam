@@ -5,8 +5,8 @@ buffer=32
 
 set -x
 
-# Move to script directory
-cd $( dirname ${BASH_SOURCE[0]} )
+# Change to base directory
+cd $( dirname ${BASH_SOURCE[0]} )/..
 
 # list all ts files ordered by date
   # get the most recent ts file

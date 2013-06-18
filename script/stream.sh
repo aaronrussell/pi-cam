@@ -6,8 +6,8 @@ fifo="live.fifo.h264"
 
 set -x
 
-# Move to script directory
-cd $( dirname ${BASH_SOURCE[0]} )
+# Change to base directory
+cd $( dirname ${BASH_SOURCE[0]} )/..
 
 # Setup session
 mkdir $session
