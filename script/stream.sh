@@ -35,7 +35,7 @@ ffmpeg -y \
   -segment_time 2 \
   -segment_format mpegts \
   -segment_list www/live.m3u8 \
-  -segment_list_size 450 \
+  -segment_list_size 900 \
   -segment_list_flags live \
   -segment_list_type m3u8 \
   "live/%08d.ts" < /dev/null
