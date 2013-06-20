@@ -20,7 +20,7 @@ ln -s "$PWD/$session" www/live
 # fifos seem to work more reliably than pipes
 mkfifo "$fifo"
 raspivid \
-  -w 1024 -h 576 -fps 25 -b 900000 \
+  -w 1024 -h 576 -fps 25 -b 500000 \
   -t 86400000 -hf -vf -o - | psips > "$fifo" &
 
 
@@ -32,7 +32,7 @@ ffmpeg -y \
   -c:v copy \
   -map 0:0 \
   -f segment \
-  -segment_time 4 \
+  -segment_time 2 \
   -segment_format mpegts \
   -segment_list www/live.m3u8 \
   -segment_list_size 450 \
